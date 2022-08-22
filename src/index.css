@@ -1,13 +1,120 @@
-body {
+*{
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+.wrapper{
+  width: 100vw;
+}
+.container{
+  position: relative;
+}
+.hero{
+  position: relative;
+  height: 100vh;
+  background-color: red;
+  background-image: url(./assets/netflex-bg_2.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.hero::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0,0,0,.6);
+  z-index: -1;
+
+
+}
+.nav{
+  color: #fff;
+  z-index: 1;
+}
+.logo{
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  color: rgb(255, 204, 0);
+  text-transform: lowercase;
+}
+.logo-add{
+  letter-spacing: normal;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+.top-nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 70px;
+  color: ;
+}
+.menu{
+  list-style: none;
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.menu-item{
+  margin: 0px 20px;
+  width: 120px;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: .7rem;
+  font-family: Montserrat;
+  font-weight: 100;
+  letter-spacing: 3px;
+  padding: 15px 10px;
+
+}
+.menu-item:hover{
+  background-color: rgba(203, 199, 199, 0.5);
+  color: yellow;
+  cursor: pointer;
+}
+.login{
+  background-color: rgb(255, 204, 0);
+  color: #000;
+  font-weight: 800;
+  border-radius: 10px;
+}
+
+.search{
+  position: relative;
+  margin: 0 auto;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 600px;
+}
+.search-container{
+  /* background-color: rgba(0,0,0,.4); */
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+}
+.search-container > *{
+  padding: 20px 40px;
+  background-color: inherit;
+  border: none;
+
+}
+.search-container input{
+  width: 90%;
+  border-radius: 10px;
+  color: #fff;
+}
+.search-container button{
+  background-color: rgb(255, 204, 0);
+  cursor: pointer;
+}
+.search-container button:hover{
+  background-color: rgb(234, 188, 5);
+}
+.search-container input:focus{
+  outline: none;
 }
